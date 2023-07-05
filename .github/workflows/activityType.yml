@@ -1,6 +1,7 @@
 name: Fifth WF
 on: 
-  issues: closed
+  issues: 
+    types: closed
 jobs:
   info:
     runs-on: ubuntu-latest
