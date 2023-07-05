@@ -1,0 +1,19 @@
+name: Six WF
+on: push
+jobs:
+  six-job:
+    name: Run on Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Check maven version
+        run: mv -v
+  other-job:
+    needs: six-job
+    name: Run after second-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check maven version
+        run: npm -v
+        
