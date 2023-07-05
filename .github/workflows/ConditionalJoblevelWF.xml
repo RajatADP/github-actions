@@ -1,0 +1,20 @@
+name: Seven WF
+on: workflow_dispatch
+jobs:
+  seven-job:
+    name: Run on Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Check maven version
+        id: maven_version
+        run: mv -v
+  other-job:
+    if: failure()
+    name:Run on ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo "ran even after above job failed"
+        
