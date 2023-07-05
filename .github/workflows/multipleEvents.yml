@@ -1,0 +1,10 @@
+name: Third WF
+on: [push, workflow_dispatch]
+jobs:
+  third-job:
+    name: Run on Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check maven version
+        run: mvn -v
+        
