@@ -1,5 +1,5 @@
 name: Six WF
-on: push
+on: workflow_dispatch
 jobs:
   six-job:
     name: Run on Ubuntu
