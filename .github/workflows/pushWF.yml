@@ -9,4 +9,11 @@ jobs:
         uses: actions/checkout@v3
       - name: Check maven version
         run: mvn -v
+  other-job:
+    needs: second-job
+    name: Run after second-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check maven version
+        run: npm -v
         
