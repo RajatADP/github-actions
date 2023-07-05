@@ -13,13 +13,6 @@ jobs:
       - name: Check maven version
         if: failure() && steps.maven_version.outcome == 'failure'
         run: npm -v
-  other-job:
-    needs: six-job
-    name: Run after second-job
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get code
-        uses: actions/checkout@v3
     
   
       
