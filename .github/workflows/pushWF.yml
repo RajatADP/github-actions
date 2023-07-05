@@ -1,0 +1,12 @@
+name: Second WF
+on: push
+jobs:
+  second-job:
+    name: Run on Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Check maven version
+        run: mvn -v
+        
