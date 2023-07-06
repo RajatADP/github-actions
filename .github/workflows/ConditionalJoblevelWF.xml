@@ -5,8 +5,6 @@ jobs:
     name: Run on Ubuntu
     runs-on: ubuntu-latest
     steps:
-      - name: Get code
-        uses: actions/checkout@v3
       - name: Check maven version
         id: maven_version
         run: mv -v
