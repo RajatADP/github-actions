@@ -9,6 +9,7 @@ jobs:
         id: maven_version
         run: mv -v
   other-job:
+    needs: [seven-job]
     if: failure()
     name:Run on ubuntu
     runs-on: ubuntu-latest
